@@ -31,39 +31,72 @@
             </ul>
         </div>
     </nav>
-    <div class="row">
-        <div class="col-4"></div>
-        <div class="col-4 kotak">
-            <h4 class="text-center form-group">Sign Up</h4>
-            <div class="row form-group">
-                <div class="col">
-                    <input type="text" class="form-control" placeholder="First name">
+
+    <form>
+        <div class="row">
+            <div class="col-4"></div>
+            <div class="col-4 kotak">
+                <h4 class="text-center form-group">Sign Up</h4>
+                <div class="row form-group">
+                    <div class="col">
+                        <input type="text" class="form-control" placeholder="First name">
+                    </div>
+                    <div class="col">
+                        <input type="text" class="form-control" placeholder="Last name">
+                    </div>
                 </div>
-                <div class="col">
-                    <input type="text" class="form-control" placeholder="Last name">
+                <div class="row form-group">
+                    <div class="col">
+                        <input type="text" class="form-control" placeholder="Username">
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <div class="col">
+                        <input type="email" class="form-control" placeholder="Email">
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <div class="col">
+                        <input type="password" class="form-control" placeholder="Password">
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <div class="col">
+                        <input type="password" class="form-control" placeholder="Repeat-password">
+                    </div>
+                </div>
+                <div class=" text-center">
+                    <button type="submit" class="btn btn-orange">Sign Up</button>
                 </div>
             </div>
-            <div class="row form-group">
-                <div class="col">
-                    <input type="text" class="form-control" placeholder="Username">
-                </div>
-            </div>
-            <div class="row form-group">
-                <div class="col">
-                    <input type="email" class="form-control" placeholder="Email">
-                </div>
-            </div>
-            <div class="row form-group">
-                <div class="col">
-                    <input type="password" class="form-control" placeholder="Repeat-password">
-                </div>
-            </div>
-            <div class=" text-center">
-                <button type="submit" class="btn btn-orange">Sign Up</button>
-            </div>
+            <div class="col-4"></div>
         </div>
-        <div class="col-4"></div>
-    </div>
+
+
+
+        <div class="row">
+            <div class="col-4"></div>
+            <div class="col-4 kotak">
+                <h4 class="text-center form-group">Sign In</h4>
+                
+                <div class="row form-group">
+                    <div class="col">
+                        <input type="text" class="form-control" placeholder="Username">
+                    </div>
+                </div>
+                
+                <div class="row form-group">
+                    <div class="col">
+                        <input type="password" class="form-control" placeholder="Password">
+                    </div>
+                </div>
+                <div class=" text-center">
+                    <button type="submit" class="btn btn-orange">Sign In</button>
+                </div>
+            </div>
+            <div class="col-4"></div>
+        </div>
+    </form>
 
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
