@@ -81,8 +81,11 @@
 
     <div class="row ">
         <div class="col-2"></div>
-        <div class="col-8 kotak2">
-            <table class="table table-bordered">
+        <div class="col-8 kotak3">
+            <table class="table table-bordered kotak2">
+                <tr>
+                    <td colspan="5">Semua Data</td>
+                </tr>
                 <tr>
                     <th>No.</th>
                     <th>Nama</th>
@@ -117,50 +120,81 @@
         <div class="col-2"></div>
     </div>
 
-    <form>
-        <div class="row">
+    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+        <div class="row display-sign-up">
             <div class="col-4"></div>
             <div class="col-4 kotak">
                 <h4 class="text-center form-group">Sign Up</h4>
                 <div class="row form-group">
                     <div class="col">
-                        <input type="text" class="form-control" placeholder="First name" id="val1">
+                        <input type="text" name="first_name" class="form-control" placeholder="First name" id="val1">
                     </div>
                     <div class="col">
-                        <input type="text" class="form-control" placeholder="Last name" id="val2">
-                    </div>
-                </div>
-                <div class="row form-group">
-                    <div class="col">
-                        <input type="text" class="form-control" placeholder="Username">
+                        <input type="text" name="last_name" class="form-control" placeholder="Last name" id="val2">
                     </div>
                 </div>
                 <div class="row form-group">
                     <div class="col">
-                        <input type="email" class="form-control" placeholder="Email">
+                        <input type="text" name="username" class="form-control" placeholder="Username">
                     </div>
                 </div>
                 <div class="row form-group">
                     <div class="col">
-                        <input type="password" class="form-control" placeholder="Password">
+                        <input type="email" name="email" class="form-control" placeholder="Email">
                     </div>
                 </div>
                 <div class="row form-group">
                     <div class="col">
-                        <input type="password" class="form-control" placeholder="Repeat-password" >
+                        <input type="password" id="pw_su" name="password" class="form-control" placeholder="Password">
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <div class="col">
+                        <input type="password" id="re_pw_su" name="repeat_password" class="form-control" placeholder="Repeat-password" >
                     </div>
                 </div>
                 <div class=" text-center">
-                    <button type="submit" class="btn btn-orange" id="">Sign Up</button>
+                    <button type="submit" class="btn btn-orange" id="btn_su">Sign Up</button>
                 </div>
                 
             </div>
             <div class="col-4"></div>
         </div>
+        <p class="text-light pesan">
+            
 
 
+            <?php
 
-        <div class="row">
+                
+                
+                // Proses data saat form dikirim
+                if ($_SERVER["REQUEST_METHOD"] == "POST"){
+                    if ($_POST["username"] != ""){
+                        // echo "ada isinya";
+                        // echo $_POST["username"];
+                        $nama_depan = $_POST["first_name"]; 
+                        $nama_belakang = $_POST["last_name"]; 
+                        $username = $_POST["username"]; 
+                        $email = $_POST["email"]; 
+                        $password = $_POST["password"]; 
+                        
+                        $masukan = mysqli_query($koneksi,"insert into user values('','$nama_depan','$nama_belakang','$username','$email', '$password')");
+                        $_POST = array();
+                        echo "<script>document.getElementById('btn_su').click();</script>";
+                    }else{
+                        // echo "tidak ada";
+                        // echo $_POST["username"];
+                    }
+                }
+
+                // 
+            ?>
+
+        </p>
+
+
+        <div class="row display-sign-in">
             <div class="col-4"></div>
             <div class="col-4 kotak">
                 <h4 class="text-center form-group">Sign In</h4>
@@ -190,7 +224,32 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
     <script>
-        
+        const pw1 = document.getElementById('pw_su');
+        const pw1r = document.getElementById('re_pw_su');
+        const btnsu = document.getElementById('btn_su');
+
+        // btnsu.disabled = true;
+
+        // pw1.addEventListener("change", (e) => {
+        //     if (pw1.value === pw1r.value){
+        //         btnsu.disabled = false;
+        //     }else{
+        //         btnsu.disabled = true;
+        //     }
+        // });
+        // pw1r.addEventListener("change", (e) => {
+        //     if (pw1.value === pw1r.value){
+        //         btnsu.disabled = false;
+        //     }else{
+        //         btnsu.disabled = true;
+        //     }
+        // });
+        btnsu.addEventListener("click", (e) => {
+            if (pw1.value !== pw1r.value || pw1.value == "" || pw1r.value == ""){
+                e.preventDefault();
+                alert('Maaf password anda belum cocok!');
+            }
+        });
     </script>
 </body>
 </html>
