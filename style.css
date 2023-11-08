@@ -1,7 +1,5 @@
 /* Kurang paham komp num */
-.container{
-
-    margin: 60px;
-    border: 1px solid red;
-
+.btn-orange{
+    color: white;
+    background-color: rgb(245, 134, 37);
 }

@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <title>Tugas CRUD-Session</title>
+    <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
     <h1>Hello world</h1>
@@ -35,7 +37,7 @@
                     <input type="password" class="form-control" placeholder="Repeat-password">
                 </div>
             </div>
-            <button type="submit" class="btn ">Sign Up</button>
+            <button type="submit" class="btn btn-orange">Sign Up</button>
         </div>
         <div class="col-4"></div>
     </div>
