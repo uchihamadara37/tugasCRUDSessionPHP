@@ -84,35 +84,40 @@
         <div class="col-8 kotak3">
             <table class="table table-bordered kotak2">
                 <tr>
-                    <td colspan="5">Semua Data</td>
+                    <th class="text-center" colspan="5">Semua Data</th>
                 </tr>
                 <tr>
                     <th>No.</th>
-                    <th>Nama</th>
                     <th>Username</th>
+                    <th>Nama</th>
                     <th>Email</th>
                     <th>Password</th>
+                    <th>Action</th>
                 </tr>
                 
 
                 <?php 
-                    $no = 1;
+                    $no = 0;
                     $data = mysqli_query($koneksi,"select * from user");
                     while($d = mysqli_fetch_array($data)){
                 ?>
                         <tr>
                             <td><?php echo $no++; ?></td>
                             <td><?php echo $d['username']; ?></td>
-                            <td><?php echo $d['password']; ?></td>
+                            <td><?php echo $d['nama_depan'] ." ". $d['nama_belakang']; ?></td>
                             <td><?php echo $d['email']; ?></td>
+                            <td><?php echo $d['password']; ?></td>
                             <td>
-                                <a href="edit.php?id=<?php echo $d['id']; ?>">EDIT</a>
-                                <a href="hapus.php?id=<?php echo $d['id']; ?>">HAPUS</a>
+                                <button type="submit" class="btn btn-success" onclick="update(<?php echo $d['id']; ?>)">Update</button>
+                                <button type="submit" class="btn btn-danger" onclick="Del(<?php echo $d['id']; ?>)">Delete</button>
+                                
                             </td>
                         </tr>
                 <?php 
                     }
                 ?>
+
+
 
                 
             </table>
@@ -250,6 +255,12 @@
                 alert('Maaf password anda belum cocok!');
             }
         });
+
+
+        function update(i){
+            alert("ok mase",);
+            console.log(i);
+        }
     </script>
 </body>
 </html>
