@@ -8,9 +8,36 @@
 </head>
 <body>
     <h1>Hello world</h1>
-    <div class="form-group">
-        <label for="exampleInputPassword1">Password</label>
-        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+    <div class="row">
+        <div class="col-4"></div>
+        <div class="col-4">
+            <h4 class="text-center form-group">Sign Up</h4>
+            <div class="row form-group">
+                <div class="col">
+                    <input type="text" class="form-control" placeholder="First name">
+                </div>
+                <div class="col">
+                    <input type="text" class="form-control" placeholder="Last name">
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col">
+                    <input type="text" class="form-control" placeholder="Username">
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col">
+                    <input type="email" class="form-control" placeholder="Email">
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col">
+                    <input type="password" class="form-control" placeholder="Repeat-password">
+                </div>
+            </div>
+            <button type="submit" class="btn ">Sign Up</button>
+        </div>
+        <div class="col-4"></div>
     </div>
 
 
