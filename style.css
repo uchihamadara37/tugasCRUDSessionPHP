@@ -1,5 +1,9 @@
 /* Kurang paham komp num */
 .btn-orange{
-    color: white;
-    background-color: rgb(245, 134, 37);
+    color: rgb(255, 255, 255);
+    background-color: rgb(240, 143, 17);
+}
+.kotak{
+    box-shadow: 12px 12px 10px black;
+    background-color: red;
 }

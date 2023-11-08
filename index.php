@@ -12,7 +12,7 @@
     <h1>Hello world</h1>
     <div class="row">
         <div class="col-4"></div>
-        <div class="col-4">
+        <div class="col-4 .kotak">
             <h4 class="text-center form-group">Sign Up</h4>
             <div class="row form-group">
                 <div class="col">
@@ -37,7 +37,9 @@
                     <input type="password" class="form-control" placeholder="Repeat-password">
                 </div>
             </div>
-            <button type="submit" class="btn btn-orange">Sign Up</button>
+            <div class=" text-center">
+                <button type="submit" class="btn btn-orange">Sign Up</button>
+            </div>
         </div>
         <div class="col-4"></div>
     </div>
