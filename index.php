@@ -312,7 +312,7 @@
                             $id = $_GET['delete'];
                             $hapus = mysqli_query($koneksi,"delete from user where id='$id'");
                         }
-                        // echo "<script>document.getElementById('reload').click();</script>";
+                        echo "<script>document.getElementById('reload').click();</script>";
                     }
                     // Proses data saat form dikirim
                     if ($_SERVER["REQUEST_METHOD"] == "POST" && $_GET['mode'] == "create"){
